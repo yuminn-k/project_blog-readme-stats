@@ -25,10 +25,12 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs = __importStar(require("fs"));
 const SITE_URL = "https://img.shields.io/badge";
+const LABEL = "Data";
+const COLOR = "blue";
 (async () => {
     // 파일에서 데이터 가져오기
     const dataText = fs.readFileSync("data.txt", { encoding: "utf-8" });
     // 배지 생성
-    const badge = `[![Data](https://img.shields.io/badge/Data-${dataText}-blue)](${SITE_URL})`;
+    const badge = `[![${LABEL}](https://img.shields.io/badge/${LABEL}-${dataText}-${COLOR})](${SITE_URL})`;
     console.log(badge);
 })();
