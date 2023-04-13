@@ -1,4 +1,4 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-require("/.crawling");
-require("./badge");
+require("./crawling.js");
+require("./badge.js");
