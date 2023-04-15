@@ -19,7 +19,7 @@ jobs:
         run: npm run build
 
       - name: Generate Badge
-        run: node dist/index.js
+        run: node build/index.js
 
       - name: Commit Results
         run: |
