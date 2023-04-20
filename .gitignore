@@ -29,6 +29,8 @@ yarn-error.log*
 .env*.local
 
 *.js
+api
+src
 
 # Mac files
 .DS_Store
