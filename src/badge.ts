@@ -1,4 +1,3 @@
-import * as puppeteer from "puppeteer";
 import * as fs from "fs";
 
 const SITE_URL = "https://img.shields.io/badge";
