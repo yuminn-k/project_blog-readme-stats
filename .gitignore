@@ -28,8 +28,6 @@ yarn-error.log*
 .env.production.local
 .env*.local
 
-*.js
-
 # Mac files
 .DS_Store
 .vercel
