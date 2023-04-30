@@ -1,8 +1,8 @@
-name: Generate Badge
+name: Generate Badge and Build
 
 on:
   schedule:
-    - cron: "0 0 * * *" # 매일 자정에 실행
+    - cron: "0 0 * * *"
 
 jobs:
   build:
@@ -17,14 +17,18 @@ jobs:
 
       - name: Build TypeScript
         run: npm run build
+        working-directory: ./build
 
       - name: Generate Badge
         run: node build/index.js
+        working-directory: ./build
 
       - name: Commit Results
         run: |
           git config --global user.name devYuMinKim
           git config --global user.email gimyumin40@gmail.com
-          git add README.md
-          git commit -m 'Update badge [skip ci]'
+          git add .
+          git commit -m 'Update badge and build [skip ci]'
           git push
+        working-directory: ./public
+
