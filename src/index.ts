@@ -1,2 +1,0 @@
-import "./crawling";
-import "./badge";
