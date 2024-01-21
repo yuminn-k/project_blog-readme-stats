@@ -19,4 +19,5 @@ RUN git config --global user.email "gimyumin40@gmail.com"
 COPY . .
 
 # スクリプト実行
-CMD ["sh", "-c", "python blog_posts_scraper.py"]
+# CMD ["sh", "-c", "python blog_posts_scraper.py"]
+CMD ["python", "blog_posts_scraper.py"]

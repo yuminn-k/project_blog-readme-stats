@@ -148,12 +148,13 @@ def save_output_to_json(output_data, output_file):
 
     return str(output_path)
 
-def main():
+def main(url, css_selector):
     """
     Main function to scrape blog posts and save the output to JSON files.
     """
-    url = "https://yuminnk-devlog.vercel.app"
-    css_selector = "#__next>div:nth-child(2)>div>div.notion-frame>div>main>div.notion-page-content>article>div.notion-collection.notion-block-52c3f72df427430ca4768e53c36a61c6>div:nth-child(2)>div>div"
+    
+    # url = "https://yuminnk-devlog.vercel.app"
+    # css_selector = "#__next>div:nth-child(2)>div>div.notion-frame>div>main>div.notion-page-content>article>div.notion-collection.notion-block-52c3f72df427430ca4768e53c36a61c6>div:nth-child(2)>div>div"
 
     latest_output_data = get_latest_blog_posts(url, css_selector)
     random_output_data = get_random_blog_posts(url, css_selector)
@@ -167,7 +168,6 @@ def main():
     save_output_to_json(random_sample_output_data, "random-posts.json")
 
 if __name__ == "__main__":
-    main()
-
-    # url = os.getenv("URL")
-    # css_selector = os.getenv("CSS_SELECTOR")
+    url = os.getenv("URL")
+    css_selector = os.getenv("CSS_SELECTOR")
+    main(url, css_selector)
