@@ -1,4 +1,4 @@
-import createBadge from "../src/cards/velog-badge.js";
+import createBadge from "../src/cards/blog-badge.js";
 
 export default async (req, res) => {
   const { name } = req.query;
